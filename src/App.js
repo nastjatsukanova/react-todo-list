@@ -88,10 +88,3 @@ function App() {
 }
 
 export default App;
-
-// if (!done) {
-//     todoItems[id].classList.add('checked') 
-// }
-// else {
-//     todoItems[id].classList.remove('checked')
-// }

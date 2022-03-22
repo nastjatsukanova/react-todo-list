@@ -2,8 +2,7 @@ import { useState } from "react";
 import "./TodoItem.styles.css"
 
 export const TodoItem = ({text, date,id, done, completeTodo, deleteTodo, changeValue}) => {
-    //let todoItems = [];
-    //todoItems = document.querySelectorAll('.todo_item');
+
     const [checked, setChecked] = useState(done);
     const handleDelete = () => {
         deleteTodo(id);

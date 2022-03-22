@@ -4,7 +4,6 @@ import "./TodoList.styles.css"
 export const TodoList = ({todos, completeTodo, deleteTodo, changeValue, updateTodos}) => {
     return (
         <div className="todo_list">
-            
         {todos && todos.map((todo, index) => (
                 <TodoItem 
                     key={index} 
