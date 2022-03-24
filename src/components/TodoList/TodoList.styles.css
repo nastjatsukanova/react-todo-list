@@ -1,6 +1,5 @@
 .todo_list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 15px;
+    align-items: center;
 }

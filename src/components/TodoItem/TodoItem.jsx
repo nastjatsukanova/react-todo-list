@@ -1,28 +1,19 @@
 import { useState } from "react";
+import { Button } from "../Controls/Button/Button";
+import { Input } from "../Controls/Input/Input";
 import "./TodoItem.styles.css"
 
 export const TodoItem = ({text, date,id, done, completeTodo, deleteTodo, changeValue}) => {
-
     const [checked, setChecked] = useState(done);
-    const handleDelete = () => {
-        deleteTodo(id);
-    }
-
-    const handleComplete = () =>{
-        completeTodo(id);
-    }
-
-    const handleChange = (e) => {
-        changeValue(e);
-    }
-
-
+    const deleteTodoHandler = () => {deleteTodo(id);}
+    const completeTodoHandler = () =>{completeTodo(id);}
+    const changeTodoHandler = (e) => {changeValue(e);}
     return (
         <div className={checked ? 'todo_item checked' : 'todo_item'} >
-            <input  type="text" className="todo_text" value={text}  onChange={handleChange} id={id} />
-            <input className="todo_date" type="date" value={date} disabled/>
-            <input className="complete" onClick={handleComplete} type="checkbox" defaultChecked={checked} onChange={() => setChecked(!checked)} />
-            <button className="delete" onClick={handleDelete}>Delete</button>
+            <Input className={"complete"} onClick={completeTodoHandler} type={"checkbox"} defaultChecked={checked} handleChange={() => setChecked(!checked)} />
+            <Input type={"text"} className={"todo_text"} value={text} handleChange={changeTodoHandler} id={id} /> 
+            <Input  className={"todo_date"} type={"date"} value={date} disabled={true}/> 
+            <Button className={"delete"} handleClick={deleteTodoHandler} text={'Delete'} />
         </div>
     )
 }
