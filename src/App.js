@@ -21,7 +21,7 @@ function App() {
     
     const handleClick = () => {
         if (inputValue.trim()) {
-            const updatedState = [...todos, {id: todos.length, text: inputValue, date:currentDate, done:false}]
+            const updatedState = [...JSON.parse(localStorage.todos), {id: todos.length, text: inputValue, date:currentDate, done:false}]
             setTodos(updatedState);
             console.log(inputValue);
             setInputValue("");
@@ -55,7 +55,6 @@ function App() {
     }
 
     const changeValue = (e) => {
-        console.log(e.target.id)
         const inputId = e.target.id;
         const value = e.target.value;    
         const changed  = [...todos.map(item => {

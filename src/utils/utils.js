@@ -8,3 +8,4 @@
 }
 
 export const setToStorage = (todos) => localStorage.setItem('todos', JSON.stringify(todos));
+
