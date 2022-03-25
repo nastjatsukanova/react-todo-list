@@ -1,7 +1,7 @@
 import './Button.styles.css'
 
-export const Button = ({handleClick,text,className}) => {
+export const Button = ({saveTodo,text,className}) => {
     return (
-        <button className={className} onClick={handleClick}>{text}</button>
+        <button className={className} onClick={saveTodo}>{text}</button>
     )
 }
