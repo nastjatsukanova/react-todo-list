@@ -9,3 +9,4 @@
 
 export const setToStorage = (todos) => localStorage.setItem('todos', JSON.stringify(todos));
 
+export const generateID = () =>  Math.floor(Math.random() * 101);

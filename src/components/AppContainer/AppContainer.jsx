@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Input } from '../Controls/Input/Input';
 import { Button } from '../Controls/Button/Button';
-import { getCurrentDate, setToStorage } from '../../utils/utils';
+import { getCurrentDate, setToStorage, generateID } from '../../utils/utils';
 import { TodoList } from '../TodoList/TodoList';
 import { Date } from '../Date/Date';
 
 const currentDate = getCurrentDate();
+
 
 export function AppContainer() {
     const [todos, setTodos] = useState(() => {
@@ -22,7 +23,7 @@ export function AppContainer() {
 
     const saveTodo = () => {
         if (inputValue.trim()) {
-            const updatedState = [...todos, {id: todos.length, text: inputValue, date:currentDate, done:false}];
+            const updatedState = [...todos, {id: generateID(), text: inputValue, date:currentDate, done:false}];
             setTodos(updatedState);
             setInputValue("");
             updateTodos(updatedState);
