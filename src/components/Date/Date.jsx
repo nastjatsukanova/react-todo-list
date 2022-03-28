@@ -5,7 +5,7 @@ import './Date.styles.css';
 
 export const Date = ({currentDate, sortDate}) => {
     const [dateForSort,setDate] = useState(currentDate);
-    const changeDate = (e) => setDate(e.target.value); 
+    const changeDateHandler = (e) => setDate(e.target.value); 
     const handleSort = () => {
         sortDate(dateForSort);
         setDate(currentDate);
@@ -16,7 +16,7 @@ export const Date = ({currentDate, sortDate}) => {
             <Input className={"current_input"} type={'date'} value={currentDate} disabled={true}/>
             </div>
             <div className="sort_block">
-            <Input className={"sort_date"} type={"date"} value={dateForSort} handleChange={changeDate} disabled={false} />
+            <Input className={"sort_date"} type={"date"} value={dateForSort} handleChange={changeDateHandler} disabled={false} />
             <Button className={"sort_btn"} saveTodo={handleSort} text={"Sort by Date"}/>
             </div>
         </div>

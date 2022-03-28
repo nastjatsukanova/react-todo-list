@@ -1,9 +1,9 @@
-import { AppContainer } from '../src/components/AppContainer/AppContainer'; 
+import { MainPage } from './components/MainPage/MainPage'; 
 
 function App() {
     return ( 
         <div className = "App">
-            <AppContainer />
+            <MainPage />
         </div>
     );
 }

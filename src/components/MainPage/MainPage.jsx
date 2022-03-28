@@ -8,7 +8,7 @@ import { Date } from '../Date/Date';
 const currentDate = getCurrentDate();
 
 
-export function AppContainer() {
+export function MainPage() {
     const [todos, setTodos] = useState(() => {
         if (localStorage.todos) {
             return JSON.parse(localStorage.todos);
@@ -18,7 +18,7 @@ export function AppContainer() {
     
 
     const [inputValue, setInputValue] = useState('');
-    const updateTodos = (todos) =>  setToStorage(todos); 
+    const updateTodosHandler = (todos) =>  setToStorage(todos); 
     const handleChange = (e) =>  setInputValue(e.target.value); 
 
     const saveTodo = () => {
@@ -26,7 +26,7 @@ export function AppContainer() {
             const updatedState = [...todos, {id: generateID(), text: inputValue, date:currentDate, done:false}];
             setTodos(updatedState);
             setInputValue("");
-            updateTodos(updatedState);
+            updateTodosHandler(updatedState);
         }
         else {
             alert('Enter your task');
@@ -41,13 +41,13 @@ export function AppContainer() {
             return item;
         })]
         setTodos(completed);
-        updateTodos(completed);
+        updateTodosHandler(completed);
     }
 
     const deleteTodo = (id) => {
         const deleted = [...todos.filter(item => id !== item.id)];
         setTodos(deleted);
-        updateTodos(deleted);
+        updateTodosHandler(deleted);
     }
 
     const sortDate = (date) => {
@@ -65,7 +65,7 @@ export function AppContainer() {
             return item;
         })]
         setTodos(changed);
-        updateTodos(changed);
+        updateTodosHandler(changed);
     }
 
     return ( 
@@ -83,5 +83,3 @@ export function AppContainer() {
         </div>
     );
 }
-
-
