@@ -1,0 +1,43 @@
+.todo_item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    border: 1px solid #cad8fa;
+}
+.todo_text {
+    padding: 5px 5px;
+    border: none;
+    text-transform: capitalize;
+    background-color: #f4f7ff;
+}
+
+.todo_date {
+    border: none;
+    color: black;
+}
+
+.complete {
+    width:30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.delete {
+    padding: 5px 15px;
+    background-color:  #cad9ff;
+    color: #6182ff;
+    border: 1px solid  #cad9ff;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: #cad9ff;
+    background-color: #6182ff;
+    border: 1px solid #6182ff;
+}
+
+.checked {
+    opacity: 0.4;
+}
+

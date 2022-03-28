@@ -1,0 +1,48 @@
+* {
+    font-size: 20px;
+}
+
+.date_block {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    margin-left: 15px
+}
+
+.current_date {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.current_input {
+    margin-left: 10px;
+    background-color: #f4f7ff;
+    padding: 5px 5px;
+    border: none;
+    color: black;
+}
+
+.sort_block {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 15px;
+}
+
+.sort_date {
+    border: 1px solid #e0e0e0;
+    padding: 5px 5px;
+}
+
+.sort_btn {
+    padding: 6px 15px;
+    background-color:  #cad9ff;
+    color: #6182ff;
+    border: 1px solid  #cad9ff;
+    cursor: pointer;
+}
+.sort_btn:hover{
+    color: #cad9ff;
+    background-color: #6182ff;
+    border: 1px solid #6182ff;
+}

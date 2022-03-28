@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+* {
+  font-family: Open Sans;
+}
+h1 {
+  font-size: 30px;
+  margin-left: 15px;
+  font-family: system-ui;
+}
+
+.App {
+  width: max-content;
+  border-radius: 10px;
+  background-color: #f7f9ff;
+  margin: 0 auto;
+}
